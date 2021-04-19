@@ -74,6 +74,9 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
     :address => "in-v3.mailjet.com",
     :port => "587",
+    :authentication => :plain,
+    :user_name => "f9f320d8da0a1d71ae297438e5cf8a5f",
+    :password => "0c7db106240c9fcd383fb43610da4b24",
     :domain => "heroku.com",
     :enable_starttls_auto => true,
   }
