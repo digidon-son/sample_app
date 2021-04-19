@@ -34,11 +34,16 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
-  host = "localhost:3000"
-
-  config.action_mailer_default_url_options = { host: host, protocol: "https" }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = "gentle-meadow-17179.herokuapp.com"
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+    :address => "in-v3.mailjet.com",
+    :port => "587",
+    :domain => "heroku.com",
+    :enable_starttls_auto => true,
+  }
 
   config.action_mailer.perform_caching = false
 

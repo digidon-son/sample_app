@@ -6,6 +6,7 @@ ruby "2.7.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 6.1.1"
 gem "mailjet"
+gem "mail"
 gem "bcrypt"
 gem "faker"
 gem "will_paginate"
