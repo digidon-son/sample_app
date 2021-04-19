@@ -51,6 +51,7 @@ group :development do
   gem "rack-mini-profiler", "~> 2.0"
   gem "listen", "~> 3.3"
   gem "web-console"
+  gem "letter_opener"
 end
 
 group :test do
