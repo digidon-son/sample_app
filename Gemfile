@@ -5,6 +5,9 @@ ruby "2.7.2"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 6.1.1"
+gem "image_processing"
+gem "mini_magick"
+gem "active_storage_validations"
 gem "mailjet"
 gem "mail"
 gem "bcrypt"
@@ -68,4 +71,5 @@ end
 
 group :production do
   gem "pg"
+  gem "aws-sdk-s3", require: false
 end

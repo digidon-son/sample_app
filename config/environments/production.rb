@@ -75,8 +75,8 @@ Rails.application.configure do
     :address => "in-v3.mailjet.com",
     :port => "587",
     :authentication => :plain,
-    :user_name => "f9f320d8da0a1d71ae297438e5cf8a5f",
-    :password => "0c7db106240c9fcd383fb43610da4b24",
+    :user_name => ENV["f9f320d8da0a1d71ae297438e5cf8a5f"],
+    :password => ENV["0c7db106240c9fcd383fb43610da4b24"],
     :domain => "heroku.com",
     :enable_starttls_auto => true,
   }
@@ -109,6 +109,9 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # Store uploaded files on Amazon AWS.
+  config.active_storage.service = :amazon
 
   # Inserts middleware to perform automatic connection switching.
   # The `database_selector` hash is used to pass options to the DatabaseSelector
