@@ -75,8 +75,8 @@ Rails.application.configure do
     :address => "in-v3.mailjet.com",
     :port => "587",
     :authentication => :plain,
-    :user_name => ENV["f9f320d8da0a1d71ae297438e5cf8a5f"],
-    :password => ENV["0c7db106240c9fcd383fb43610da4b24"],
+    :user_name => ENV["MAILJET_USERNAME"],
+    :password => ENV["MAILJET_PASSWORD"],
     :domain => "heroku.com",
     :enable_starttls_auto => true,
   }
